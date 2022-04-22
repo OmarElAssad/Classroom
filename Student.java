@@ -7,21 +7,25 @@ public class Student {
     private String lastName;
     private int yearOfBirth;
     private Course course;
+    private Computer computer;
 
     public Student() {
     }
 
-    public Student(String firstName, String lastName, int yearOfBirth) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.yearOfBirth = yearOfBirth;
-    }
-
-    public Student(String firstName, String lastName, int yearOfBirth, Course course) {
+    public Student(String firstName, String lastName, int yearOfBirth, Course course, Computer computer) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearOfBirth = yearOfBirth;
         this.course = course;
+        this.computer = computer;
+    }
+    
+    public Computer getComputer() {
+        return this.computer;
+    }
+
+    public void setComputer(Computer computer) {
+        this.computer = computer;
     }
 
     public Course getCourse() {
@@ -61,6 +65,7 @@ public class Student {
         System.out.println("Last Name: " + this.getLastName());
         System.out.println("Year of birth: " + this.getYearOfBirth());
         this.getCourse().printInConsole();
+        this.getComputer().printInConsole();
         System.out.println();
     }
 }

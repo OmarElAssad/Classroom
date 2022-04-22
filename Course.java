@@ -3,17 +3,14 @@ public class Course {
     private int numberOfClasses;
     private String codeName;
 
-
     public Course() {
     }
-
 
     public Course(String name, int numberOfClasses, String codeName) {
         this.name = name;
         this.numberOfClasses = numberOfClasses;
         this.codeName = codeName;
     }
-
 
     public Course(String name, int numberOfClasses) {
         this.name = name;
@@ -48,6 +45,5 @@ public class Course {
         System.out.println("Name of Course: " + this.getName());
         System.out.println("Number of classes: " + this.getNumberOfClasses());
         System.out.println("Code name: " + this.getCodeName());
-        System.out.println();
     }
 }

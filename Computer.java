@@ -1,10 +1,29 @@
 public class Computer {
+    private String computerName;
     private String operatingSystem;
     private float processTact;
     private float memory;
     private int hardDrive;
 
+    public Computer() {
+    }
 
+    public Computer(String computerName, String operatingSystem, float processTact, float memory, int hardDrive) {
+        this.computerName = computerName;
+        this.operatingSystem = operatingSystem;
+        this.processTact = processTact;
+        this.memory = memory;
+        this.hardDrive = hardDrive;
+    }
+
+    public String getComputerName() {
+        return this.computerName;
+    }
+
+    public void setComputerName(String computerName) {
+        this.computerName = computerName;
+    }
+   
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -38,10 +57,11 @@ public class Computer {
     }
 
     public void printInConsole() {
+        System.out.println("Computer name: " + this.getComputerName());
         System.out.println("Operating system: " + this.getOperatingSystem());
-        System.out.println("Process tact: " + this.getProcessTact());
-        System.out.println("Memory: " + this.getMemory());
-        System.out.println("Hard drive: " + this.getHardDrive());
+        System.out.println("Process tact: " + this.getProcessTact() + " GHz");
+        System.out.println("Memory: " + this.getMemory() + " GB");
+        System.out.println("Hard drive: " + this.getHardDrive() + " GB");
         System.out.println();
     }
 
